@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./images/dolar.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Conversor</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="contenedor">
+                <div class="contenedor-img">
+                    <img src="./images/bitcoin.png" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
+                </div>
+              <div class="contenedor-tit">
+                <h1>Exchange</h1>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <section>
+        <div class="contPri">
+            <div class="contPri-info">
+                <div class="contPri-info-tit">
+                    <h1>Encontrá el cambio de tu divisa</h1>
+                </div>
+                <div class="contPri-info-txt">
+                    <p>¡Le damos la bienvenida a la herramienta de divisas más fiable del mundo!</p>
+                </div>
+            </div>
+            <div class="contPri-img">
+                <img src="./images/global.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="contSec">
+            <div class="contSec-pri">
+                <div class="contSec-pri-ico">
+                    <img src="./images/cambio.png" alt="">
+                </div>
+                <div class="contSec-pri-tit">
+                    <h2>Conversor de divisas</h2>
+                </div>
+            </div>
+            <div class="contSec-sec">
+                <div class="contSec-sec-ico">
+                    <img src="./images/bit.png" alt="">
+                </div>
+                <div class="contSec-sec-tit">
+                    <h2>Cotizador de criptomonedas</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="cont">
+            <div class="cont-titulo">
+                <h1>Conversor de moneda</h1>
+                <p>Escoje la moneda y la cantidad para realizar la conversion</p>
+            </div>
+    
+            <div class="cont-conv">
+                <div class="moneda">
+                    <select id="moneda-uno">
+                        <option value="AED">AED</option>
+                        <option value="ARS" selected>ARS</option>
+                        <option value="AUD">AUD</option>
+                        <option value="BGN">BGN</option>
+                        <option value="BRL">BRL</option>
+                        <option value="BSD">BSD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="CHF">CHF</option>
+                        <option value="CLP">CLP</option>
+                        <option value="CNY">CNY</option>
+                        <option value="COP">COP</option>
+                        <option value="CZK">CZK</option>
+                        <option value="DKK">DKK</option>
+                        <option value="DOP">DOP</option>
+                        <option value="EGP">EGP</option>
+                        <option value="EUR">EUR</option>
+                        <option value="FJD">FJD</option>
+                        <option value="GBP">GBP</option>
+                        <option value="GTQ">GTQ</option>
+                        <option value="HKD">HKD</option>
+                        <option value="HRK">HRK</option>
+                        <option value="HUF">HUF</option>
+                        <option value="IDR">IDR</option>
+                        <option value="ILS">ILS</option>
+                        <option value="INR">INR</option>
+                        <option value="ISK">ISK</option>
+                        <option value="JPY">JPY</option>
+                        <option value="KRW">KRW</option>
+                        <option value="KZT">KZT</option>
+                        <option value="MXN">MXN</option>
+                        <option value="MYR">MYR</option>
+                        <option value="NOK">NOK</option>
+                        <option value="NZD">NZD</option>
+                        <option value="PAB">PAB</option>
+                        <option value="PEN">PEN</option>
+                        <option value="PHP">PHP</option>
+                        <option value="PKR">PKR</option>
+                        <option value="PLN">PLN</option>
+                        <option value="PYG">PYG</option>
+                        <option value="RON">RON</option>
+                        <option value="RUB">RUB</option>
+                        <option value="SAR">SAR</option>
+                        <option value="SEK">SEK</option>
+                        <option value="SGD">SGD</option>
+                        <option value="THB">THB</option>
+                        <option value="TRY">TRY</option>
+                        <option value="TWD">TWD</option>
+                        <option value="UAH">UAH</option>
+                        <option value="USD" selected>USD</option>
+                        <option value="UYU">UYU</option>
+                        <option value="VND">VND</option>
+                        <option value="ZAR">ZAR</option>
+                    </select>
+        
+                    <input 
+                    type="number" 
+                    id="cantidad-uno" 
+                    placeholder="0"  
+                    value="1"
+                    >
+                </div>
+        
+                <div class="taza-cambio-container">
+                    <button class="btn" id="taza">
+                        ↑↓
+                    </button>
+                    <div class="cambio" id="cambio"></div>
+                </div>
+        
+                <div class="moneda">
+                    <select id="moneda-dos">
+                        <option value="AED">AED</option>
+                        <option value="ARS" selected>ARS</option>
+                        <option value="AUD">AUD</option>
+                        <option value="BGN">BGN</option>
+                        <option value="BRL">BRL</option>
+                        <option value="BSD">BSD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="CHF">CHF</option>
+                        <option value="CLP">CLP</option>
+                        <option value="CNY">CNY</option>
+                        <option value="COP">COP</option>
+                        <option value="CZK">CZK</option>
+                        <option value="DKK">DKK</option>
+                        <option value="DOP">DOP</option>
+                        <option value="EGP">EGP</option>
+                        <option value="EUR">EUR</option>
+                        <option value="FJD">FJD</option>
+                        <option value="GBP">GBP</option>
+                        <option value="GTQ">GTQ</option>
+                        <option value="HKD">HKD</option>
+                        <option value="HRK">HRK</option>
+                        <option value="HUF">HUF</option>
+                        <option value="IDR">IDR</option>
+                        <option value="ILS">ILS</option>
+                        <option value="INR">INR</option>
+                        <option value="ISK">ISK</option>
+                        <option value="JPY">JPY</option>
+                        <option value="KRW">KRW</option>
+                        <option value="KZT">KZT</option>
+                        <option value="MXN">MXN</option>
+                        <option value="MYR">MYR</option>
+                        <option value="NOK">NOK</option>
+                        <option value="NZD">NZD</option>
+                        <option value="PAB">PAB</option>
+                        <option value="PEN">PEN</option>
+                        <option value="PHP">PHP</option>
+                        <option value="PKR">PKR</option>
+                        <option value="PLN">PLN</option>
+                        <option value="PYG">PYG</option>
+                        <option value="RON">RON</option>
+                        <option value="RUB">RUB</option>
+                        <option value="SAR">SAR</option>
+                        <option value="SEK">SEK</option>
+                        <option value="SGD">SGD</option>
+                        <option value="THB">THB</option>
+                        <option value="TRY">TRY</option>
+                        <option value="TWD">TWD</option>
+                        <option value="UAH">UAH</option>
+                        <option value="USD">USD</option>
+                        <option value="UYU">UYU</option>
+                        <option value="VND">VND</option>
+                        <option value="ZAR">ZAR</option>
+        
+                    </select>
+        
+                    <input 
+                    type="number" 
+                    id="cantidad-dos" 
+                    placeholder="0"  
+                    >
+        
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="contCrip">
+            <div class="contCrip-left">
+                <img src="./images/bit.png" alt="">
+            </div>
+            <div class="form-side">
+                <h2>Cotizador de Criptomonedas</h2>
+                <form action="" id="form-search">
+                    <select id="moneda" name="moneda">
+                        <option value="">Elige tu moneda</option>
+                        <option value="USD">Dolar Estadounidense</option>
+                        <option value="ARS">Peso Argentino</option>
+                        <option value="MXN">Peso Mexicano</option>
+                        <option value="GBP">Libras</option>
+                        <option value="EUR">Euros</option>
+                    </select>
+    
+                    <select id="criptomonedas" name="criptomoneda">
+                        <option value="" >Elige tu criptomoneda</option>
+                    </select>
+    
+                    <input class="" type="submit" value="Cotizar" />
+                    <div class="container-answer"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="fot">
+            <div class="fot-pri">
+                <div>
+                    <p>Exchange</p>
+                </div>
+                <div>
+                    <p>Avenida Siempre viva 123</p>
+                </div>
+                <div>
+                    <p>(011) 444-0000 | (011) 444-0001</p>
+                </div>
+            </div>
+            <div class="fot-sec">
+                <div>
+                    <p>E-mail: info@exchange.com.ar</p>
+                </div>
+                <div>
+                    <p>Centro de Atención telefónica: 0810-123-0000<br/>de lunes a viernes de 9 a 17 horas.</p>
+                </div>
+            </div>
+            <div class="fot-ter">
+                <div>
+                    <p>CASA CENTRAL</p>
+                </div>
+                <div>
+                    <p>San Martín 345 (1004), CABA.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>
